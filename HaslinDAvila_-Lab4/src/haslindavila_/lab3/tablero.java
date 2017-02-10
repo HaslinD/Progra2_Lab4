@@ -11,7 +11,7 @@ import java.awt.Color;
  *
  * @author Franklin Garcia
  */
-public class tablero {
+public abstract class tablero  {
     protected Color color;
     protected String material;
    
