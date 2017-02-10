@@ -13,8 +13,15 @@ public class HaslinDAvila_Lab3 {
     private static String lugar_de_nacimiento;
     private static int edad;
     private static String genero;
-
+    
     public static void main(String[] args) {
+        Caballero caballero=new Caballero();
+        mago mago=new mago();
+        Duende duende=new Duende();
+        arquero arquero=new arquero();
+        rey rey=new rey();
+        dragon dragon=new dragon();
+        
         ArrayList<jugadores> jugador = new ArrayList();
         tableroA = new String[10][10];
         int opt = 0;
