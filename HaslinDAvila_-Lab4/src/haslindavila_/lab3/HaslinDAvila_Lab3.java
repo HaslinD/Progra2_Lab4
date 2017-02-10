@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class HaslinDAvila_Lab3 {
 
-    static String[][] tableroA;
+    
     private static String nombre;
     private static String nuser;
     private static int puntos;
@@ -22,7 +22,6 @@ public class HaslinDAvila_Lab3 {
         
         
         ArrayList<jugadores> jugador = new ArrayList();
-        tableroA = new String[10][10]; 
         int opt = 0;
         int opt2 = 0;
         do {
@@ -36,13 +35,10 @@ public class HaslinDAvila_Lab3 {
                 case 1:
                     do {
                         String MenuP = "--Menu--\n"
-
                                 + "1. Agregar\n"
                                 + "2. Listar\n"
                                 + "3. Eliminar\n"
-                                + "4. Tablero\n"
                                 + "Ingrese la Opcion Siguiente: ";
-
                         opt2 = Integer.parseInt(JOptionPane.showInputDialog(MenuP));
                         switch (opt2) {
                             case 1:
@@ -74,15 +70,13 @@ public class HaslinDAvila_Lab3 {
                                 pos = Integer.parseInt(JOptionPane.showInputDialog(elemento));
                                 jugador.remove(pos);
                                 break;
-                            case 4:
-                                espacios();
-                                piezas();
-                                System.out.println(Print(tableroA));
-                                break;
                         }
                     } while (opt2 > 0 && opt2 < 5);
                     break;
                 case 2:
+                    String[][] tableroA = new String[10][10]; 
+                    System.out.println(Print(espacios(piezas(tableroA))));
+
                     int x, y, x2, y2;
                     System.out.println("Ingrese pos X");
                     x = lectura.nextInt();
@@ -111,115 +105,120 @@ public class HaslinDAvila_Lab3 {
         return c;
     }
 
-    public static String[][] espacios() {
+    public static String[][] espacios(String [][] tableroA) {
         for (int i = 0; i < tableroA.length; i++) {
             for (int j = 0; j < tableroA.length; j++) {
-                tableroA[i][j] = "   ";
+                if (i >= 0 && j >= 0 || i < tableroA.length - 1 && j < tableroA[0].length - 1) {
+                    
+                }
             }
         }
         return tableroA;
     }
-    public static String[][] piezas(){
+    
+    public static String[][] piezas(String[][] tableroA){
         for (int i = 0; i < tableroA.length; i++) {
             for (int j = 0; j < tableroA.length; j++) {
                 if (i >= 0 && j >= 0 || i < tableroA.length - 1 && j < tableroA[0].length - 1) {
                     if (i == 0 && j == 0) {
                         tableroA[i][j] = "C-N";
                     }
-                    if (i == 1 && j == 0) {
+                    else if (i == 1 && j == 0) {
                         tableroA[i][j] = "D-N";
                     }
-                    if (i == 0 && j == 2) {
+                    else if (i == 0 && j == 2) {
                         tableroA[i][j] = "F-N";
                     }
-                    if (i == 1 && j == 2) {
+                    else if (i == 1 && j == 2) {
                         tableroA[i][j] = "A-N";
                     }
-                    if (i == 0 && j == 3) {
+                    else if (i == 0 && j == 3) {
                         tableroA[i][j] = "A-N";
                     }
-                    if (i == 1 && j == 3) {
+                    else if (i == 1 && j == 3) {
                         tableroA[i][j] = "D-N";
                     }
-                    if (i == 0 && j == 4) {
+                    else if (i == 0 && j == 4) {
                         tableroA[i][j] = "R-N";
                     }
-                    if (i == 1 && j == 4) {
+                    else if (i == 1 && j == 4) {
                         tableroA[i][j] = "C-N";
                     }
-                    if (i == 0 && j == 5) {
+                    else if (i == 0 && j == 5) {
                         tableroA[i][j] = "M-N";
                     }
-                    if (i == 1 && j == 5) {
+                    else if (i == 1 && j == 5) {
                         tableroA[i][j] = "F-N";
                     }
-                    if (i == 0 && j == 6) {
+                    else if (i == 0 && j == 6) {
                         tableroA[i][j] = "A-N";
                     }
-                    if (i == 1 && j == 6) {
+                    else if (i == 1 && j == 6) {
                         tableroA[i][j] = "D-N";
                     }
-                    if (i == 0 && j == 7) {
+                    else if (i == 0 && j == 7) {
                         tableroA[i][j] = "F-N";
                     }
-                    if (i == 1 && j == 7) {
+                    else if (i == 1 && j == 7) {
                         tableroA[i][j] = "A-N";
                     }
-                    if (i == 0 && j == 9) {
+                    else if (i == 0 && j == 9) {
                         tableroA[i][j] = "C-N";
                     }
-                    if (i == 1 && j == 9) {
+                    else if (i == 1 && j == 9) {
                         tableroA[i][j] = "D-N";
                     }
                     //--------------------------------------------------------\\
-                    if (i == 9 && j == 0) {
+                    else if (i == 9 && j == 0) {
                         tableroA[i][j] = "C-B";
                     }
-                    if (i == 8 && j == 0) {
+                    else if (i == 8 && j == 0) {
                         tableroA[i][j] = "D-B";
                     }
-                    if (i == 9 && j == 2) {
+                    else if (i == 9 && j == 2) {
                         tableroA[i][j] = "F-B";
                     }
-                    if (i == 8 && j == 2) {
+                    else if (i == 8 && j == 2) {
                         tableroA[i][j] = "A-B";
                     }
-                    if (i == 9 && j == 3) {
+                    else if (i == 9 && j == 3) {
                         tableroA[i][j] = "A-B";
                     }
-                    if (i == 8 && j == 3) {
+                    else if (i == 8 && j == 3) {
                         tableroA[i][j] = "D-B";
                     }
-                    if (i == 9 && j == 4) {
+                    else if (i == 9 && j == 4) {
                         tableroA[i][j] = "R-B";
                     }
-                    if (i == 8 && j == 4) {
+                    else if (i == 8 && j == 4) {
                         tableroA[i][j] = "C-B";
                     }
-                    if (i == 9 && j == 5) {
+                    else if (i == 9 && j == 5) {
                         tableroA[i][j] = "M-B";
                     }
-                    if (i == 8 && j == 5) {
+                    else if (i == 8 && j == 5) {
                         tableroA[i][j] = "F-B";
                     }
-                    if (i == 9 && j == 6) {
+                    else if (i == 9 && j == 6) {
                         tableroA[i][j] = "A-B";
                     }
-                    if (i == 8 && j == 6) {
+                    else if (i == 8 && j == 6) {
                         tableroA[i][j] = "D-B";
                     }
-                    if (i == 9 && j == 7) {
+                    else if (i == 9 && j == 7) {
                         tableroA[i][j] = "F-B";
                     }
-                    if (i == 8 && j == 7) {
+                    else if (i == 8 && j == 7) {
                         tableroA[i][j] = "A-B";
                     }
-                    if (i == 9 && j == 9) {
+                    else if (i == 9 && j == 9) {
                         tableroA[i][j] = "C-B";
                     }
-                    if (i == 8 && j == 9) {
+                    else if (i == 8 && j == 9) {
                         tableroA[i][j] = "D-B";
                     }
+                    else 
+                        tableroA[i][j] = "  ";
                 }
             }
         }
