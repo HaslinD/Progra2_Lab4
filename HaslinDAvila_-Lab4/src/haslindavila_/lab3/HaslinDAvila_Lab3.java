@@ -80,7 +80,7 @@ public class HaslinDAvila_Lab3 {
     public static char[][] espacios(){
         for (int i = 0; i < tableroA.length; i++) {
             for (int j = 0; j < tableroA.length; j++) {
-                tableroA[i][j] = '*';
+                tableroA[i][j] = ' ';
             }
         }
         return tableroA;
