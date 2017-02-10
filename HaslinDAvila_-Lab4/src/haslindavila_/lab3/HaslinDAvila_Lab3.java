@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class HaslinDAvila_Lab3 {
+
     static String[][] tableroA;
     private static String nombre;
     private static String nuser;
@@ -15,8 +16,8 @@ public class HaslinDAvila_Lab3 {
 
     public static void main(String[] args) {
         ArrayList<jugadores> jugador = new ArrayList();
-        Caballero c = new Caballero();
         tableroA = new String[10][10]; 
+        tableroA = new String[10][10];
         int opt = 0;
         int opt2 = 0;
         do {
@@ -30,11 +31,13 @@ public class HaslinDAvila_Lab3 {
                 case 1:
                     do {
                         String MenuP = "--Menu--\n"
-                            + "1. Agregar\n"
-                            + "2. Listar\n"
-                            + "3. Eliminar\n"
-                            + "4. Prueba Tablero\n"
-                            + "Ingrese la Opcion Siguiente: ";
+
+                                + "1. Agregar\n"
+                                + "2. Listar\n"
+                                + "3. Eliminar\n"
+                                + "4. Tablero\n"
+                                + "Ingrese la Opcion Siguiente: ";
+
                         opt2 = Integer.parseInt(JOptionPane.showInputDialog(MenuP));
                         switch (opt2) {
                             case 1:
@@ -75,23 +78,25 @@ public class HaslinDAvila_Lab3 {
                     } while (opt2 > 0 && opt2 < 5);
                     break;
                 case 2:
-                    
+
                     break;
-                    
+
             }
         } while (opt > 0 && opt < 3);
     }
-    public static String Print(String[][]t){
+
+    public static String Print(String[][] t) {
         String c = "";
         for (int i = 0; i < t.length; i++) {
             for (int j = 0; j < t[i].length; j++) {
-                c = c + "[ "+t[i][j] + " ]";
+                c = c + "[ " + t[i][j] + " ]";
             }
-            c+="\n";
+            c += "\n";
         }
         return c;
     }
-    public static String[][] espacios(){
+
+    public static String[][] espacios() {
         for (int i = 0; i < tableroA.length; i++) {
             for (int j = 0; j < tableroA.length; j++) {
                 tableroA[i][j] = "   ";
