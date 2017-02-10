@@ -21,6 +21,9 @@ public class HaslinDAvila_Lab3 {
         Caballero caballero = new Caballero();
         dragon drag = new dragon();
         mago mg = new mago();
+        arquero aq = new arquero();
+        Duende dnd = new Duende();
+        rey ry = new rey();  
         ArrayList<jugadores> jugador = new ArrayList();
         int opt = 0;
         int opt2 = 0;
@@ -78,18 +81,76 @@ public class HaslinDAvila_Lab3 {
                     String[][] tableroA = new String[10][10]; 
                     System.out.println(Print(piezas(tableroA)));
                     int cont = 0;
+                    if (cont % 2 == 0) {
+                        System.out.println("Player 1");
+                    } else {
+                        System.out.println("Player 2");
+                    }
                     while (cont < 100) {
                         if (cont % 2 == 0) {
-                            System.out.println("Ingrese pos X");
-                            x = lectura.nextInt();
-                            System.out.println("Ingrese pos Y");
-                            y = lectura.nextInt();
-                            System.out.println("Ingrese mov a X");
-                            x2 = lectura.nextInt();
-                            System.out.println("Ingrese mov a Y");
-                            y2 = lectura.nextInt();
-                            drag.movimientos(tableroA, x, y, x2, y2);
+                            String ops = JOptionPane.showInputDialog("Ingrese su pieza");
+                                if (ops.equalsIgnoreCase("Dragon")) {
+                                    try {
+                                    System.out.println("Ingrese pos X");
+                                    x = lectura.nextInt();
+                                    System.out.println("Ingrese pos Y");
+                                    y = lectura.nextInt();
+                                    System.out.println("Ingrese mov a X");
+                                    x2 = lectura.nextInt();
+                                    System.out.println("Ingrese mov a Y");
+                                    y2 = lectura.nextInt();
+                                    drag.movimientos(tableroA, x, y, x2, y2);
+                                } catch (Exception e) {
+                                    JOptionPane.showInputDialog("LAS coordenadas ingreadas son incorrectas");
+                                }
+                            } else if (ops.equalsIgnoreCase("Arquero")) {
+                                try {
+                                    System.out.println("Ingrese pos X");
+                                    x = lectura.nextInt();
+                                    System.out.println("Ingrese pos Y");
+                                    y = lectura.nextInt();
+                                    System.out.println("Ingrese mov a X");
+                                    x2 = lectura.nextInt();
+                                    System.out.println("Ingrese mov a Y");
+                                    y2 = lectura.nextInt();
+                                    aq.movimientos(tableroA, x, y, x2, y2);
+                                } catch (Exception e) {
+                                    JOptionPane.showInputDialog("LAS coordenadas ingreadas son incorrectas");
+                                }
+                            }
+                            
                         
+                        } else {
+                            String ops2 = JOptionPane.showInputDialog("Ingrese su pieza");
+                                if (ops2.equalsIgnoreCase("Dragon")) {
+                                    try {
+                                    System.out.println("Ingrese pos X");
+                                    x = lectura.nextInt();
+                                    System.out.println("Ingrese pos Y");
+                                    y = lectura.nextInt();
+                                    System.out.println("Ingrese mov a X");
+                                    x2 = lectura.nextInt();
+                                    System.out.println("Ingrese mov a Y");
+                                    y2 = lectura.nextInt();
+                                    drag.movimientos(tableroA, x, y, x2, y2);
+                                } catch (Exception e) {
+                                    JOptionPane.showInputDialog("LAS coordenadas ingreadas son incorrectas");
+                                }
+                            } else if (ops2.equalsIgnoreCase("Arquero")) {
+                                try {
+                                    System.out.println("Ingrese pos X");
+                                    x = lectura.nextInt();
+                                    System.out.println("Ingrese pos Y");
+                                    y = lectura.nextInt();
+                                    System.out.println("Ingrese mov a X");
+                                    x2 = lectura.nextInt();
+                                    System.out.println("Ingrese mov a Y");
+                                    y2 = lectura.nextInt();
+                                    aq.movimientos(tableroA, x, y, x2, y2);
+                                } catch (Exception e) {
+                                    JOptionPane.showInputDialog("LAS coordenadas ingreadas son incorrectas");
+                                }
+                            }
                         }
                     }
                     System.out.println(Print(tableroA));
