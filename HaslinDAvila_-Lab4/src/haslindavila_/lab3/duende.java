@@ -26,7 +26,6 @@ public class Duende extends tablero {
         return "Duende{" + '}';
     }
 
-    @Override
     public String movimientos() {
         return "";
     }

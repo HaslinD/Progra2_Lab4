@@ -2,6 +2,7 @@ package haslindavila_.lab3;
 
 //Haslin David y Josue Garcia
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class HaslinDAvila_Lab3 {
@@ -15,16 +16,13 @@ public class HaslinDAvila_Lab3 {
     private static String genero;
     
     public static void main(String[] args) {
-        Caballero caballero=new Caballero();
-        mago mago=new mago();
-        Duende duende=new Duende();
-        arquero arquero=new arquero();
-        rey rey=new rey();
-        dragon dragon=new dragon();
+        
+        Scanner lectura=new Scanner(System.in);
+        Caballero caballero = new Caballero();
+        
         
         ArrayList<jugadores> jugador = new ArrayList();
         tableroA = new String[10][10]; 
-        tableroA = new String[10][10];
         int opt = 0;
         int opt2 = 0;
         do {
@@ -85,7 +83,17 @@ public class HaslinDAvila_Lab3 {
                     } while (opt2 > 0 && opt2 < 5);
                     break;
                 case 2:
-
+                    int x, y, x2, y2;
+                    System.out.println("Ingrese pos X");
+                    x = lectura.nextInt();
+                    System.out.println("Ingrese pos Y");
+                    y = lectura.nextInt();
+                    System.out.println("Ingrese mov a X");
+                    x2 = lectura.nextInt();
+                    System.out.println("Ingrese mov a X");
+                    y2 = lectura.nextInt();
+                    caballero.movimientos(tableroA, x, y, x2, y2);
+                    System.out.println(Print(tableroA));
                     break;
 
             }
