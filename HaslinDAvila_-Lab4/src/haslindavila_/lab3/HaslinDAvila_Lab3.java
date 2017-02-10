@@ -20,7 +20,7 @@ public class HaslinDAvila_Lab3 {
         Scanner lectura=new Scanner(System.in);
         Caballero caballero = new Caballero();
         dragon drag = new dragon();
-        
+        mago mg = new mago();
         ArrayList<jugadores> jugador = new ArrayList();
         int opt = 0;
         int opt2 = 0;
@@ -77,19 +77,24 @@ public class HaslinDAvila_Lab3 {
                     int x, y, x2, y2;
                     String[][] tableroA = new String[10][10]; 
                     System.out.println(Print(piezas(tableroA)));
-
-                    System.out.println("Ingrese pos X");
-                    x = lectura.nextInt();
-                    System.out.println("Ingrese pos Y");
-                    y = lectura.nextInt();
-                    System.out.println("Ingrese mov a X");
-                    x2 = lectura.nextInt();
-                    System.out.println("Ingrese mov a Y");
-                    y2 = lectura.nextInt();
-                    drag.movimientos(tableroA, x, y, x2, y2);
+                    int cont = 0;
+                    while (cont < 100) {
+                        if (cont % 2 == 0) {
+                            System.out.println("Ingrese pos X");
+                            x = lectura.nextInt();
+                            System.out.println("Ingrese pos Y");
+                            y = lectura.nextInt();
+                            System.out.println("Ingrese mov a X");
+                            x2 = lectura.nextInt();
+                            System.out.println("Ingrese mov a Y");
+                            y2 = lectura.nextInt();
+                            drag.movimientos(tableroA, x, y, x2, y2);
+                        
+                        }
+                    }
                     System.out.println(Print(tableroA));
+                    cont ++;
                     break;
-
             }
         } while (opt > 0 && opt < 3);
     }
