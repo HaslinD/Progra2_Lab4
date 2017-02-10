@@ -30,11 +30,13 @@ public class HaslinDAvila_Lab3 {
                 case 1:
                     do {
                         String MenuP = "--Menu--\n"
+
                                 + "1. Agregar\n"
                                 + "2. Listar\n"
                                 + "3. Eliminar\n"
                                 + "4. Tablero\n"
                                 + "Ingrese la Opcion Siguiente: ";
+
                         opt2 = Integer.parseInt(JOptionPane.showInputDialog(MenuP));
                         switch (opt2) {
                             case 1:
@@ -68,11 +70,12 @@ public class HaslinDAvila_Lab3 {
                                 break;
                             case 4:
                                 espacios();
-                                Print(tableroA);
+                                piezas();
+                                System.out.println(Print(tableroA));
                                 break;
 
                         }
-                    } while (opt2 > 0 && opt < 5);
+                    } while (opt2 > 0 && opt2 < 5);
                     break;
                 case 2:
 
@@ -96,7 +99,113 @@ public class HaslinDAvila_Lab3 {
     public static String[][] espacios() {
         for (int i = 0; i < tableroA.length; i++) {
             for (int j = 0; j < tableroA.length; j++) {
-                tableroA[i][j] = " ";
+                tableroA[i][j] = "   ";
+            }
+        }
+        return tableroA;
+    }
+    public static String[][] piezas(){
+        for (int i = 0; i < tableroA.length; i++) {
+            for (int j = 0; j < tableroA.length; j++) {
+                if (i >= 0 && j >= 0 || i < tableroA.length - 1 && j < tableroA[0].length - 1) {
+                    if (i == 0 && j == 0) {
+                        tableroA[i][j] = "C-N";
+                    }
+                    if (i == 1 && j == 0) {
+                        tableroA[i][j] = "D-N";
+                    }
+                    if (i == 0 && j == 2) {
+                        tableroA[i][j] = "F-N";
+                    }
+                    if (i == 1 && j == 2) {
+                        tableroA[i][j] = "A-N";
+                    }
+                    if (i == 0 && j == 3) {
+                        tableroA[i][j] = "A-N";
+                    }
+                    if (i == 1 && j == 3) {
+                        tableroA[i][j] = "D-N";
+                    }
+                    if (i == 0 && j == 4) {
+                        tableroA[i][j] = "R-N";
+                    }
+                    if (i == 1 && j == 4) {
+                        tableroA[i][j] = "C-N";
+                    }
+                    if (i == 0 && j == 5) {
+                        tableroA[i][j] = "M-N";
+                    }
+                    if (i == 1 && j == 5) {
+                        tableroA[i][j] = "F-N";
+                    }
+                    if (i == 0 && j == 6) {
+                        tableroA[i][j] = "A-N";
+                    }
+                    if (i == 1 && j == 6) {
+                        tableroA[i][j] = "D-N";
+                    }
+                    if (i == 0 && j == 7) {
+                        tableroA[i][j] = "F-N";
+                    }
+                    if (i == 1 && j == 7) {
+                        tableroA[i][j] = "A-N";
+                    }
+                    if (i == 0 && j == 9) {
+                        tableroA[i][j] = "C-N";
+                    }
+                    if (i == 1 && j == 9) {
+                        tableroA[i][j] = "D-N";
+                    }
+                    //--------------------------------------------------------\\
+                    if (i == 9 && j == 0) {
+                        tableroA[i][j] = "C-B";
+                    }
+                    if (i == 8 && j == 0) {
+                        tableroA[i][j] = "D-B";
+                    }
+                    if (i == 9 && j == 2) {
+                        tableroA[i][j] = "F-B";
+                    }
+                    if (i == 8 && j == 2) {
+                        tableroA[i][j] = "A-B";
+                    }
+                    if (i == 9 && j == 3) {
+                        tableroA[i][j] = "A-B";
+                    }
+                    if (i == 8 && j == 3) {
+                        tableroA[i][j] = "D-B";
+                    }
+                    if (i == 9 && j == 4) {
+                        tableroA[i][j] = "R-B";
+                    }
+                    if (i == 8 && j == 4) {
+                        tableroA[i][j] = "C-B";
+                    }
+                    if (i == 9 && j == 5) {
+                        tableroA[i][j] = "M-B";
+                    }
+                    if (i == 8 && j == 5) {
+                        tableroA[i][j] = "F-B";
+                    }
+                    if (i == 9 && j == 6) {
+                        tableroA[i][j] = "A-B";
+                    }
+                    if (i == 8 && j == 6) {
+                        tableroA[i][j] = "D-B";
+                    }
+                    if (i == 9 && j == 7) {
+                        tableroA[i][j] = "F-B";
+                    }
+                    if (i == 8 && j == 7) {
+                        tableroA[i][j] = "A-B";
+                    }
+                    if (i == 9 && j == 9) {
+                        tableroA[i][j] = "C-B";
+                    }
+                    if (i == 8 && j == 9) {
+                        tableroA[i][j] = "D-B";
+                    }
+                }
             }
         }
         return tableroA;
