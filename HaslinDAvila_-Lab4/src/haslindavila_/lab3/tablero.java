@@ -14,6 +14,9 @@ import java.awt.Color;
 public abstract class tablero  {
     protected Color color;
     protected String material;
+
+    public tablero() {
+    }
    
     public tablero(Color color) {
         this.color = color;

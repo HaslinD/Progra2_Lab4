@@ -69,12 +69,14 @@ public class HaslinDAvila_Lab3 {
                                 espacios();
                                 Print(tableroA);
                                 break;
+                    
                         }
                     } while (opt2 > 0 && opt < 5);
                     break;
                 case 2:
                     
                     break;
+                    
             }
         } while (opt > 0 && opt < 3);
     }
