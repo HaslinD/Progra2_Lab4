@@ -23,7 +23,7 @@ public class Caballero extends tablero {
 
     @Override
     public String toString() {
-        return "Caballero{" + '}';
+        return "Caballero{" +"C"+ '}';
     }
 
     @Override

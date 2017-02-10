@@ -64,6 +64,8 @@ public class HaslinDAvila_Lab3 {
             }
         } while (opt > 0 && opt < 5);
     }
+    
+    //--------------------------------------------------------
     public static void matriz(char[][] m, int f, int c){
         if (f == m.length - 1 && c == m[0].length - 1)
             System.out.println("[" + m[f][c] + "]");
@@ -78,7 +80,7 @@ public class HaslinDAvila_Lab3 {
     public static char[][] espacios(){
         for (int i = 0; i < tableroA.length; i++) {
             for (int j = 0; j < tableroA.length; j++) {
-                tableroA[i][j] = ' ';
+                tableroA[i][j] = '*';
             }
         }
         return tableroA;
