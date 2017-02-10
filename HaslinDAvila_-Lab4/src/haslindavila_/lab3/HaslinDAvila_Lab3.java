@@ -15,6 +15,7 @@ public class HaslinDAvila_Lab3 {
 
     public static void main(String[] args) {
         ArrayList<jugadores> jugador = new ArrayList();
+        Caballero c = new Caballero();
         tableroA = new String[10][10]; 
         int opt = 0;
         int opt2 = 0;
@@ -70,7 +71,6 @@ public class HaslinDAvila_Lab3 {
                                 piezas();
                                 System.out.println(Print(tableroA));
                                 break;
-                    
                         }
                     } while (opt2 > 0 && opt2 < 5);
                     break;

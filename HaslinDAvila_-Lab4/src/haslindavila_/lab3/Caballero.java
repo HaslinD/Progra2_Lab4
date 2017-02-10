@@ -27,7 +27,7 @@ public class Caballero extends tablero {
     }
 
     @Override
-    public String movimientos() {
+    public String movimientos(String[][] tab, ) {
        
     }
     
