@@ -28,7 +28,14 @@ public class rey extends tablero {
 
     @Override
     public void movimientos(String[][] cad, int x, int y, int x2, int y2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i = 0; i < cad.length; i++) {
+            for (int j = 0; j < cad.length; j++) {
+                if ((i == x2 && j == y2) &&  (i >= 0 && j >= 0 || i < cad.length - 1 && j < cad[0].length - 1)) {
+                    cad[i][j] = cad[x][y];
+                    cad[x][y] = "   ";
+                }
+            }
+        }
     }
 
 }
