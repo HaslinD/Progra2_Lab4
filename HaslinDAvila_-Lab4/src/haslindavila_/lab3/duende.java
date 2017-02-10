@@ -5,30 +5,10 @@
  */
 package haslindavila_.lab3;
 
-import java.awt.Color;
-
 /**
  *
- * @author Franklin Garcia
+ * @author Fiery_000
  */
-public class duende extends tablero{
-
-    public duende() {
-        super();
-    }
-
-    public duende(Color color, String material) {
-        super(color, material);
-    }
-
-    @Override
-    public String toString() {
-        return "duende{" + '}';
-    }
-
-    @Override
-    public String movimientos() {
-        return "";
-    }
+public class Duende {
     
 }
