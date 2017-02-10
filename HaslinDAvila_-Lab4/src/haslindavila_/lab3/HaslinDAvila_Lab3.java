@@ -8,6 +8,7 @@ package haslindavila_.lab3;
 /**
  *
  * @author Fiery_000
+ * 
  */
 public class HaslinDAvila_Lab3 {
 
@@ -15,7 +16,7 @@ public class HaslinDAvila_Lab3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
     }
     
 }
