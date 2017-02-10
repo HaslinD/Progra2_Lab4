@@ -9,30 +9,26 @@ import java.awt.Color;
 
 /**
  *
- * @author Fiery_000
+ * @author Franklin Garcia
  */
-public class Caballero extends tablero {
+public class dragon extends tablero {
 
-    public Caballero() {
+    public dragon() {
         super();
     }
 
-    public Caballero(Color color, String material) {
+    public dragon(Color color, String material) {
         super(color, material);
     }
 
     @Override
     public String toString() {
-        return "Caballero{" + '}';
+        return "dragon{" + '}';
     }
 
     @Override
     public String movimientos() {
-       return "";
+        return "";
     }
-    
-   
- 
 
-    
 }

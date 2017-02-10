@@ -41,6 +41,7 @@ public class HaslinDAvila_Lab3 {
                         }
                     }
                     break;
+                    
                 case 3:
                     String elemento = "";
                     for (Object t : jugador) {
@@ -49,6 +50,7 @@ public class HaslinDAvila_Lab3 {
                         }
                     }
                     break;
+                    
             }
         } while (opt > 0 && opt < 5);
     }
