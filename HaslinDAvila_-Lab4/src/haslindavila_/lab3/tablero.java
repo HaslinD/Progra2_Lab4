@@ -48,6 +48,6 @@ public abstract class tablero  {
         return "tablero{" + "color=" + color + ", material=" + material + '}';
     }
    
-    public abstract String[][] movimientos(String [][]cad, int x, int y, int x2, int y2);
+    public abstract void movimientos(String [][]cad, int x, int y, int x2, int y2);
     
 }

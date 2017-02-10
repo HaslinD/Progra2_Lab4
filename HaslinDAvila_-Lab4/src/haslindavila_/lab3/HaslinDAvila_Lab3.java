@@ -75,17 +75,17 @@ public class HaslinDAvila_Lab3 {
                     break;
                 case 2:
                     String[][] tableroA = new String[10][10]; 
-                    System.out.println(Print(espacios(piezas(tableroA))));
+                    System.out.println(Print(piezas(tableroA)));
 
                     int x, y, x2, y2;
                     System.out.println("Ingrese pos X");
-                    x = lectura.nextInt();
-                    System.out.println("Ingrese pos Y");
-                    y = lectura.nextInt();
-                    System.out.println("Ingrese mov a X");
                     x2 = lectura.nextInt();
-                    System.out.println("Ingrese mov a X");
+                    System.out.println("Ingrese pos Y");
                     y2 = lectura.nextInt();
+                    System.out.println("Ingrese mov a X");
+                    x = lectura.nextInt();
+                    System.out.println("Ingrese mov a Y");
+                    y = lectura.nextInt();
                     caballero.movimientos(tableroA, x, y, x2, y2);
                     System.out.println(Print(tableroA));
                     break;
@@ -103,17 +103,6 @@ public class HaslinDAvila_Lab3 {
             c += "\n";
         }
         return c;
-    }
-
-    public static String[][] espacios(String [][] tableroA) {
-        for (int i = 0; i < tableroA.length; i++) {
-            for (int j = 0; j < tableroA.length; j++) {
-                if (i >= 0 && j >= 0 || i < tableroA.length - 1 && j < tableroA[0].length - 1) {
-                    
-                }
-            }
-        }
-        return tableroA;
     }
     
     public static String[][] piezas(String[][] tableroA){
@@ -218,7 +207,7 @@ public class HaslinDAvila_Lab3 {
                         tableroA[i][j] = "D-B";
                     }
                     else 
-                        tableroA[i][j] = "  ";
+                        tableroA[i][j] = "   ";
                 }
             }
         }

@@ -27,8 +27,10 @@ public class mago extends tablero {
     }
 
     @Override
-    public String movimientos() {
-        return "";
+    public void movimientos(String[][] cad, int x, int y, int x2, int y2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+ 
     
 }

@@ -27,16 +27,15 @@ public class Caballero extends tablero {
     }
 
     @Override
-    public String[][] movimientos(String[][] cad, int x, int y, int x2, int y2) {
+    public void movimientos(String[][] cad, int x, int y, int x2, int y2) {
         for (int i = 0; i < cad.length; i++) {
             for (int j = 0; j < cad.length; j++) {
-                if ((x == x2 && y == y2) &&  (i >= 0 && j >= 0 || i < cad.length - 1 && j < cad[0].length - 1)) {
+                if ((i == x2 && j == y2) &&  (i >= 0 && j >= 0 || i < cad.length - 1 && j < cad[0].length - 1)) {
                     cad[i][j] = cad[x][y];
-                    cad[i][j] = "   ";
+                    cad[x][y] = "   ";
                 }
             }
         }
-        return cad;
     }
 
     
