@@ -24,6 +24,13 @@ public class HaslinDAvila_Lab3 {
             opt = Integer.parseInt(JOptionPane.showInputDialog(MenuP));
             switch (opt){
                 case 1:
+                    nombre = JOptionPane.showInputDialog("Ingrese el Nombre");
+                    nuser = JOptionPane.showInputDialog("Ingrese nombre de Usuario");
+                    puntos = 0;
+                    lugar_de_nacimiento = JOptionPane.showInputDialog("Ingrese lugar de nacimiento");
+                    edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese edad"));
+                    genero = JOptionPane.showInputDialog("Ingrese Genero [F/M]");
+                    jugador.add(new jugadores(nombre, nuser, puntos, lugar_de_nacimiento, genero, edad));
                     break;
                 case 2:
                     break;
